@@ -1,0 +1,75 @@
+[1/5] cmd.exe /C "cd /D C:\Users\prath\workspace\MQTT_I2C_DAC_LED_INTENSITY(Integrated)\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/prath/workspace/MQTT_I2C_DAC_LED_INTENSITY(Integrated)/build/partition_table/partition-table.bin C:/Users/prath/workspace/MQTT_I2C_DAC_LED_INTENSITY(Integrated)/build/mqtt_tcp_custom_outbox.bin"
+mqtt_tcp_custom_outbox.bin binary size 0xf0090 bytes. Smallest app partition is 0x100000 bytes. 0xff70 bytes (6%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\prath\workspace\MQTT_I2C_DAC_LED_INTENSITY(Integrated)\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/prath/workspace/MQTT_I2C_DAC_LED_INTENSITY(Integrated)/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.2.2\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.2.2 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.2_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=haesptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 mqtt_tcp_custom_outbox.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port COM3
+Connecting.....
+Chip is ESP32-D0WD (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: fc:f5:c4:55:91:e0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00100fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16349...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16349 compressed) at 0x00001000 in 0.8 seconds (effective 282.3 kbit/s)...
+Hash of data verified.
+Compressed 983184 bytes to 608491...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001e2f6... (5 %)
+Writing at 0x00027d93... (7 %)
+Writing at 0x0002cbf0... (10 %)
+Writing at 0x000349d6... (13 %)
+Writing at 0x00041536... (15 %)
+Writing at 0x00046e50... (18 %)
+Writing at 0x0004cb2e... (21 %)
+Writing at 0x00052c53... (23 %)
+Writing at 0x0005899e... (26 %)
+Writing at 0x0005e54f... (28 %)
+Writing at 0x000642a7... (31 %)
+Writing at 0x0006abb9... (34 %)
+Writing at 0x00070883... (36 %)
+Writing at 0x000762b7... (39 %)
+Writing at 0x0007b842... (42 %)
+Writing at 0x00080bc5... (44 %)
+Writing at 0x00086020... (47 %)
+Writing at 0x0008b430... (50 %)
+Writing at 0x00090a7c... (52 %)
+Writing at 0x0009623d... (55 %)
+Writing at 0x0009c114... (57 %)
+Writing at 0x000a1ced... (60 %)
+Writing at 0x000a7661... (63 %)
+Writing at 0x000ad21a... (65 %)
+Writing at 0x000b3008... (68 %)
+Writing at 0x000b8895... (71 %)
+Writing at 0x000be4ef... (73 %)
+Writing at 0x000c46b0... (76 %)
+Writing at 0x000ca9a5... (78 %)
+Writing at 0x000d0237... (81 %)
+Writing at 0x000d9fe5... (84 %)
+Writing at 0x000e2127... (86 %)
+Writing at 0x000e8475... (89 %)
+Writing at 0x000ee088... (92 %)
+Writing at 0x000f3b6c... (94 %)
+Writing at 0x000f9cd7... (97 %)
+Writing at 0x000ff0dd... (100 %)
+Wrote 983184 bytes (608491 compressed) at 0x00010000 in 14.3 seconds (effective 550.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 395.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+rd_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/prath/workspace/MQTT_I2C_DAC_LED_INTENSITY(Integrated)/build -P C:/Espressif/frameworks/esp-idf-v5.2.2/components/esptool_py/run_serial_tool.cmake"
